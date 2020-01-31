@@ -6,3 +6,5 @@ build
 .lock
 composer.lock
 .phpunit.result.cache
+.env
+/storage/*.key
