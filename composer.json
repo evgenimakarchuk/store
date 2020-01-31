@@ -13,7 +13,7 @@
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
-        "musonza/chat": "^4.2"
+        "tcg/voyager": "^1.3"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
@@ -59,5 +59,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
+    },
+    "repositories": {
+        "hooks": {
+            "type": "composer",
+            "url": "https://larapack.io"
+        }
     }
 }
