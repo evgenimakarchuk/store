@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Facades\Voyager;
@@ -26,5 +26,11 @@ class Category extends Model
     public function parentId()
     {
         return $this->belongsTo(self::class);
+    }
+    public function category(){
+        return $this->belongsTo('App\Category','parent_id');
+    }
+    public function categories(){
+        return $this->hasMany('App\Category','parent_id');
     }
 }

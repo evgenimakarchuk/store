@@ -83,14 +83,12 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="img/logo.png"></a></h1>
+                        <h1><a href="#"><img src="img/logo.png"></a></h1>
                     </div>
                 </div>
                 
                 <div class="col-sm-6">
-                    <div class="shopping-item">
-                        <a href="cart.html">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -109,15 +107,31 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="shop.html">Shop page</a></li>
                         <li><a href="single-product.html">Single product</a></li>
                         <li class="active"><a href="cart.html">Cart</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="#">Category</a></li>
+                        <li class="dropdown dropdown-small">
+                            <a data-toggle="dropdown" data-hover="dropdown" 
+                                                      class="dropdown-toggle" href="localhost:8888">Category</a>
+                          <ul class="dropdown-menu">
+                          <!-- @foreach($v_cats as $one)
+                        <li><a href="{{asset('catalog/'.$one->slug)}}">{{$one->name}}</a> </li>
+                          @endforeach  -->
+                          <li><a href="/catalog/smartphones">Смартфоны</a> </li>
+                          <li><a href="/catalog/tablets">Планшеты</a> </li>
+                          <li><a href="/catalog/laptops">Ноутбуки</a> </li>
+                          <li><a href="/catalog/computers">Компьютеры</a> </li>   
+                          </ul>
+                        </li>
                         <li><a href="#">Others</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
+                    <div class="shopping-item">
+                        <a href="cart.html">Cart  - <span class="cart-amunt">$100</span> 
+                          <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
                 </div>  
             </div>
         </div>

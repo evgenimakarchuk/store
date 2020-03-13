@@ -83,14 +83,12 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="./"><img src="img/logo.png"></a></h1>
+                        <h1><a href="#"><img src="img/logo.png"></a></h1>
                     </div>
                 </div>
                 
                 <div class="col-sm-6">
-                    <div class="shopping-item">
-                        <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -109,15 +107,31 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="shop.html">Shop page</a></li>
                         <li class="active"><a href="single-product.html">Single product</a></li>
                         <li><a href="cart.html">Cart</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="#">Category</a></li>
+                        <li class="dropdown dropdown-small">
+                            <a data-toggle="dropdown" data-hover="dropdown" 
+                                                      class="dropdown-toggle" href="localhost:8888">Category</a>
+                          <ul class="dropdown-menu">
+                          <!-- @foreach($v_cats as $one)
+                        <li><a href="{{asset('catalog/'.$one->slug)}}">{{$one->name}}</a> </li>
+                          @endforeach  -->
+                          <li><a href="/catalog/smartphones">Смартфоны</a> </li>
+                          <li><a href="/catalog/tablets">Планшеты</a> </li>
+                          <li><a href="/catalog/laptops">Ноутбуки</a> </li>
+                          <li><a href="/catalog/computers">Компьютеры</a> </li>   
+                          </ul>
+                        </li>
                         <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="http://localhost:8888/contacts">Contact</a></li>
                     </ul>
+                    <div class="shopping-item">
+                        <a href="cart.html">Cart  - <span class="cart-amunt">$100</span> 
+                          <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
                 </div>  
             </div>
         </div>
@@ -128,7 +142,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Shop</h2>
+                        <h2>Single product</h2>
                     </div>
                 </div>
             </div>
@@ -197,15 +211,15 @@
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
                             <a href="">Home</a>
-                            <a href="">Category Name</a>
-                            <a href="">Sony Smart TV - 2015</a>
+                            <a href="">компьютеры</a>
+                            <a href="">Monoblock Apple iMac 27"</a>
                         </div>
                         
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="img/product-2.jpg" alt="">
+                                         <img src="storage/products/February2020/qI0T7v7uvylMHkEVOVQj.jpeg" alt=""> 
                                     </div>
                                     
                                     <div class="product-gallery">
@@ -218,9 +232,9 @@
                             
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">Sony Smart TV - 2015</h2>
+                                    <h2 class="product-name">Monoblock Apple iMac 27"</h2>
                                     <div class="product-inner-price">
-                                        <ins>$700.00</ins> <del>$100.00</del>
+                                        <ins>4800,00</ins> <del>100,00</del>
                                     </div>    
                                     
                                     <form action="" class="cart">
@@ -242,7 +256,7 @@
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="home">
                                                 <h2>Product Description</h2>  
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, diam in consequat iaculis, est purus iaculis mauris, imperdiet facilisis ante ligula at nulla. Quisque volutpat nulla risus, id maximus ex aliquet ut. Suspendisse potenti. Nulla varius lectus id turpis dignissim porta. Quisque magna arcu, blandit quis felis vehicula, feugiat gravida diam. Nullam nec turpis ligula. Aliquam quis blandit elit, ac sodales nisl. Aliquam eget dolor eget elit malesuada aliquet. In varius lorem lorem, semper bibendum lectus lobortis ac.</p>
+                                                <p>27" 5120 x 2880, Intel Core i5 8500 3000 МГц, 8 ГБ...</p>
 
                                                 <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus, non malesuada sem accumsan in. Morbi vel sodales libero.</p>
                                             </div>

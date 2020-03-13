@@ -1,0 +1,78 @@
+        /* выпадающее меню */
+.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #5a88ca; color:#FFF;}
+.mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu a {background: #FFF; color:#000;}
+.mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu li:hover a {background: #f4f4f4; color:#000;}
+.mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu li {position: relative; display: block;}
+.mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu li ul {display: none;}
+.mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu li:hover ul {position: absolute; top: 5px; left: 100%; display: block; background: #FFF;}
+.mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu ul.subkatehori a {background: #FFF; color:#000;}
+.mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu li ul li:hover a {background: #f4f4f4; color:#000;}
+
+.mainmenu-area .nav > li {border-right: 1px solid black;}
+/* .mainmenu-area .nav > li:nth-child(1) {border-left: none;} */
+.mainmenu-area .nav > li > a:focus {background: #5a88ca; color:#FFF;}
+/* color: #0000FF; */
+
+        /* поиск */        
+.dropdown input,svg#close {display: none;}
+.dropdown input {width: 80px; padding-left: 10px;}
+.dropdown input:focus {width: 400px;}
+.dropdown input:focus::placeholder {opacity: 0;}
+.dropdown input,.dropdown form {cursor: pointer;}
+
+
+.modal_vindow {
+
+    position: fixed;
+    top: 65px;
+    left: 10%;
+    width: 80%;
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+    box-shadow: 1px 1px 1px black;
+    z-index: 99; 
+    overflow: auto;  
+}
+.modal-close {
+
+    position: fixed;
+    top: 65px;
+    right: 11%;
+    margin: 0;
+    padding: 0;   
+    color: red;
+    font-size: 30px;             
+}
+.modal-close:hover {
+
+    position: fixed;
+    display: block;
+    top: 75px;
+    right: 11%;    
+    background-color: red;
+    color: white;    
+    text-decoration: none;
+    text-align: center;
+    text-indent: 0px;
+    line-height: 65%;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;        
+}
+#overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: #000;
+}
+/* .modal-close::before {
+    position: relative;
+    top: -1px;
+    content: "close";
+    font-size: 14px;
+} */

@@ -24,4 +24,24 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('catalog/{slug}','CatalogController@getOne');
+
+Route::get('/product/{id}','ProductController@getOne');
+
+Route::get('basket','BasketController@getIndex');
+
+Route::get('/basket/delete/{id}','BasketController@getDelete');
+
+Route::post('/basket/edit/{id}','BasketController@postEdit');
+
+Route::post('basket/order','OrderController@postIndex');
+
+Route::resources(['feedback'=>'FeedbackController']);
+
+Route::post('ajax/datalist','Ajax\DatalistController@postIndex');
+
+Route::post('ajax/modal','Ajax\ModalController@postIndex');
+
 Route::get('{url}', 'PageController@getIndex');
+
+
