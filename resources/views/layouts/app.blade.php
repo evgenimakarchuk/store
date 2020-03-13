@@ -35,7 +35,7 @@
 </head>
 <body>
 
-<div class="header-area" style="background-color: yellow;">
+<div class="header-area">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -127,16 +127,26 @@
       <div class="navbar-collapse collapse">
 
         <ul class="nav navbar-nav">
- 
-          <li class="active"><a href="{{asset('/')}}">Домой</a></li>
-          <li style="border-left: 1px solid black;"><a href="shop.html">Страница магазина</a></li>
-          <li style="border-left: 1px solid black;"><a href="single-product.html">Один продукт</a></li>
-          <li style="border-left: 1px solid black;"><a href="cart.html">Корзина</a></li>
-          <li style="border-left: 1px solid black;"><a href="checkout.html">Проверка</a></li>
-          <li style="border-left: 1px solid black;"><a href="#">Категория</a></li>
-          <li style="border-left: 1px solid black;"><a href="#">Другие</a></li>
-          <li style="border-left: 1px solid black;"><a href="{{asset('about')}}">О компании</a></li>
-          <li style="border-left: 1px solid black;"><a href="{{asset('contacts')}}">Контакты</a></li>
+          <!-- <li class="active"><a href="{{asset('/')}}">Домой</a></li> -->
+          <li><a href="{{asset('/')}}">Домой</a></li>
+          <li><a href="shop.html">Страница магазина</a></li>
+          <!-- <li><a href="single-product.html">Один продукт</a></li> -->
+          <!-- <li><a href="cart.html">Корзина</a></li> -->
+          <li><a href="checkout.html">Проверка</a></li>
+            
+          <li class="dropdown dropdown-small">
+              <a data-toggle="dropdown" data-hover="dropdown" 
+                                        class="dropdown-toggle" href="#">Категория</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Смартфоны</a></li>
+                <li><a href="#">Планшеты</a></li>
+                <li><a href="#">Ноутбуки</a></li>
+                <li><a href="#">Компьютеры</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Другие</a></li>
+          <li><a href="{{asset('about')}}">О компании</a></li>
+          <li><a href="{{asset('contacts')}}">Контакты</a></li>
 
         </ul>
         <div class="shopping-item">
