@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/all.css') }}">
     @section('styles')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     @show
@@ -35,22 +36,22 @@
 </head>
 <body>
 
-<div class="header-area" style="background: #7CFC00;">
+<div class="header-area">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
         <div class="user-menu">
           <ul class="navbar-nav ml-auto">
-            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-            <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
-            <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
+            <li class="aut"><a href="#"><i class="fa fa-user"></i> My Account</a></li>
+            <li class="aut"><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
+            <li class="aut"><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
+            <li class="aut"><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                 @guest
-            <li class="nav-item">
+            <li class="nav-item aut">
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
                   @if (Route::has('register'))
-            <li class="nav-item">
+            <li class="nav-item aut">
               <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
             </li>
                   @endif
@@ -205,7 +206,7 @@
               print_r($v_url_arr)
             @endphp -->
                
-          <a class="shopping-item" style="display: none; color: red;"  id="clearBasket" 
+          <a class="shopping-item" id="clearBasket" style="display: none; color: red;text-decoration: none;"   
                                                 href="#">Очистить</a>     
           <div class="shopping-item" >
               <a class="cart-amunt" href="#">Корзина - <span class="cart-amunt"><span id="totalPrice">0</span> руб.</span> 
@@ -213,7 +214,7 @@
                 <span class="product-count"><span id="totalGoods">0</span></span>
               </a> 
           </div>        
-          <a class="shopping-item" style="display: none; color: green;" id="checkOut" 
+          <a class="shopping-item" id="checkOut" style="display: none; color: green; text-decoration: none;" 
                                    href="{{asset('basket')}}">Оформить</a>                   
       </div>
     </div>

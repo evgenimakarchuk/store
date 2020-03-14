@@ -32,6 +32,7 @@ body { font-family:Arial, Helvetica, sans-serif; }
 
 .header-area {
     background: none repeat scroll 0 0  #FFFF00;
+    width: 100%;
 }
 .header-area a {
     color: #888;

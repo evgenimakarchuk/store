@@ -1,3 +1,7 @@
+
+body{
+    background-color: red;
+}
         /* выпадающее меню */
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #5a88ca; color:#FFF;}
 .mainmenu-area ul.navbar-nav li.dropdown ul.dropdown-menu a {background: #FFF; color:#000;}
