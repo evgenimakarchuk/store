@@ -100,12 +100,14 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         ),
         'N' => 
         array (
+            'NunoMaduro\\LaravelConsoleTask\\' => 30,
             'NunoMaduro\\Collision\\' => 21,
         ),
         'M' => 
         array (
             'Musonza\\Chat\\' => 13,
             'Monolog\\' => 8,
+            'MadWeb\\Initializer\\' => 19,
         ),
         'L' => 
         array (
@@ -353,6 +355,10 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
         ),
+        'NunoMaduro\\LaravelConsoleTask\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nunomaduro/laravel-console-task/src',
+        ),
         'NunoMaduro\\Collision\\' => 
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
@@ -364,6 +370,10 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'MadWeb\\Initializer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mad-web/laravel-initializer/src',
         ),
         'League\\Fractal\\' => 
         array (
@@ -541,8 +551,12 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
     );
 
     public static $classMap = array (
+        'App\\Categories' => __DIR__ . '/../..' . '/app/Categories.php',
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Ajax\\DatalistController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ajax/DatalistController.php',
+        'App\\Http\\Controllers\\Ajax\\ModalController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ajax/ModalController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -551,8 +565,11 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\BasketController' => __DIR__ . '/../..' . '/app/Http/Controllers/BasketController.php',
         'App\\Http\\Controllers\\CatalogController' => __DIR__ . '/../..' . '/app/Http/Controllers/CatalogController.php',
+        'App\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FeedbackController' => __DIR__ . '/../..' . '/app/Http/Controllers/FeedbackController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -563,6 +580,10 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\FeedbackRequest' => __DIR__ . '/../..' . '/app/Http/Requests/FeedbackRequest.php',
+        'App\\Http\\Requests\\OrderRequest' => __DIR__ . '/../..' . '/app/Http/Requests/OrderRequest.php',
+        'App\\Install' => __DIR__ . '/../..' . '/app/Install.php',
+        'App\\Libs\\MyMail' => __DIR__ . '/../..' . '/app/Libs/MyMail.php',
         'App\\Maintext' => __DIR__ . '/../..' . '/app/Maintext.php',
         'App\\Order' => __DIR__ . '/../..' . '/app/Order.php',
         'App\\Page' => __DIR__ . '/../..' . '/app/Page.php',
@@ -572,8 +593,10 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Providers\\UserServiseProvider' => __DIR__ . '/../..' . '/app/Providers/UserServiseProvider.php',
         'App\\Providers\\ViewComposers\\AppComposer' => __DIR__ . '/../..' . '/app/Providers/ViewComposers/AppComposer.php',
         'App\\Providers\\ViewServiceProvider' => __DIR__ . '/../..' . '/app/Providers/ViewServiceProvider.php',
+        'App\\Update' => __DIR__ . '/../..' . '/app/Update.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Arrilot\\Widgets\\AbstractWidget' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/AbstractWidget.php',
         'Arrilot\\Widgets\\AsyncFacade' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/AsyncFacade.php',
@@ -3256,6 +3279,24 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         'League\\Fractal\\Serializer\\Serializer' => __DIR__ . '/..' . '/league/fractal/src/Serializer/Serializer.php',
         'League\\Fractal\\Serializer\\SerializerAbstract' => __DIR__ . '/..' . '/league/fractal/src/Serializer/SerializerAbstract.php',
         'League\\Fractal\\TransformerAbstract' => __DIR__ . '/..' . '/league/fractal/src/TransformerAbstract.php',
+        'MadWeb\\Initializer\\Actions\\Action' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Actions/Action.php',
+        'MadWeb\\Initializer\\Actions\\Artisan' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Actions/Artisan.php',
+        'MadWeb\\Initializer\\Actions\\Callback' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Actions/Callback.php',
+        'MadWeb\\Initializer\\Actions\\Dispatch' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Actions/Dispatch.php',
+        'MadWeb\\Initializer\\Actions\\External' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Actions/External.php',
+        'MadWeb\\Initializer\\Actions\\Publish' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Actions/Publish.php',
+        'MadWeb\\Initializer\\Actions\\PublishTag' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Actions/PublishTag.php',
+        'MadWeb\\Initializer\\Console\\Commands\\AbstractInitializeCommand' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Console/Commands/AbstractInitializeCommand.php',
+        'MadWeb\\Initializer\\Console\\Commands\\InstallCommand' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Console/Commands/InstallCommand.php',
+        'MadWeb\\Initializer\\Console\\Commands\\UpdateCommand' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Console/Commands/UpdateCommand.php',
+        'MadWeb\\Initializer\\Contracts\\Runner' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Contracts/Runner.php',
+        'MadWeb\\Initializer\\InitializerServiceProvider' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/InitializerServiceProvider.php',
+        'MadWeb\\Initializer\\Jobs\\MakeCronTask' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Jobs/MakeCronTask.php',
+        'MadWeb\\Initializer\\Jobs\\MakeEchoServerConfig' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Jobs/MakeEchoServerConfig.php',
+        'MadWeb\\Initializer\\Jobs\\Supervisor\\MakeQueueSupervisorConfig' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Jobs/Supervisor/MakeQueueSupervisorConfig.php',
+        'MadWeb\\Initializer\\Jobs\\Supervisor\\MakeSocketSupervisorConfig' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Jobs/Supervisor/MakeSocketSupervisorConfig.php',
+        'MadWeb\\Initializer\\Jobs\\Supervisor\\MakeSupervisorConfig' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Jobs/Supervisor/MakeSupervisorConfig.php',
+        'MadWeb\\Initializer\\Run' => __DIR__ . '/..' . '/mad-web/laravel-initializer/src/Run.php',
         'MenuItemsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MenuItemsTableSeeder.php',
         'MenusTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MenusTableSeeder.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
@@ -3522,6 +3563,7 @@ class ComposerStaticInitac7a739fb49f2599527669ce18098318
         'NunoMaduro\\Collision\\Highlighter' => __DIR__ . '/..' . '/nunomaduro/collision/src/Highlighter.php',
         'NunoMaduro\\Collision\\Provider' => __DIR__ . '/..' . '/nunomaduro/collision/src/Provider.php',
         'NunoMaduro\\Collision\\Writer' => __DIR__ . '/..' . '/nunomaduro/collision/src/Writer.php',
+        'NunoMaduro\\LaravelConsoleTask\\LaravelConsoleTaskServiceProvider' => __DIR__ . '/..' . '/nunomaduro/laravel-console-task/src/LaravelConsoleTaskServiceProvider.php',
         'Opis\\Closure\\Analyzer' => __DIR__ . '/..' . '/opis/closure/src/Analyzer.php',
         'Opis\\Closure\\ClosureContext' => __DIR__ . '/..' . '/opis/closure/src/ClosureContext.php',
         'Opis\\Closure\\ClosureScope' => __DIR__ . '/..' . '/opis/closure/src/ClosureScope.php',

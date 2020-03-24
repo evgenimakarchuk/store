@@ -15,7 +15,7 @@
 
         /* поиск */        
 .dropdown input,svg#close {display: none;}
-.dropdown input {width: 400px; padding-left: 10px;}
+
 
 
 .dropdown input:focus::placeholder {opacity: 0;}
@@ -27,8 +27,7 @@
     position: fixed;
     top: 65px;
     left: 10%;
-    width: 80%;
-    
+    width: 80%;    
     border-radius: 5px;
     background: white;
     padding: 10px;
@@ -78,6 +77,8 @@ body{
 .header-area {
     background: none repeat scroll 0 0  #7CFC00;
 }
+/* .dropdown form  {text-align: right;} */
+.dropdown input {width: 1100px; padding-left: 10px; }
 /* .modal-close::before {
     position: relative;
     top: -1px;

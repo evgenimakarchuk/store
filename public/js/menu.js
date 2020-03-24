@@ -3,8 +3,8 @@
 
 $('.bi').on('click',function(){
     $('.aut').hide();
-    $('#data_products,#close' ).show(1000);
-
+    $('#data_products,#close' ).show(2000); 
+   
 });
 
 $('#close').on('click',function(){

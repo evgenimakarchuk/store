@@ -35,23 +35,23 @@
     <![endif]-->
 </head>
 <body>
-
+@if(Request::is('/'))
 <div class="header-area">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 aut">
         <div class="user-menu">
           <ul class="navbar-nav ml-auto">
-            <li class="aut"><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-            <li class="aut"><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-            <li class="aut"><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
-            <li class="aut"><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
+            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
+            <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
+            <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
                 @guest
-            <li class="nav-item aut">
+            <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
                   @if (Route::has('register'))
-            <li class="nav-item aut">
+            <li class="nav-item">
               <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
             </li>
                   @endif
@@ -82,7 +82,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div id="prod" class="col-md-6">
         <div class="header-right">
           <ul class="list-unstyled list-inline">
            
@@ -109,7 +109,7 @@
             </li>
 
             <li class="dropdown dropdown-sm" >        
-              <form>
+              <form >
                 @csrf 
                   <svg id="close" class="bi bi-x-square" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M16 3H4a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1zM4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4z" clip-rule="evenodd"></path>
@@ -132,7 +132,7 @@
     </div>
   </div>
 </div> <!-- End header area -->
-
+@endif
 
 <div class="mainmenu-area">
   <div class="container">
