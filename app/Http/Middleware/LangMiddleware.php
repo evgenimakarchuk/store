@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App;
 
 class LangMiddleware
 {
@@ -15,27 +16,24 @@ class LangMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (isset($_GET['lang'])) {
-            $lang = $_GET['lang'];
-        } else {
-            if(isset($_COOKIE['lang'])){
-                $lang = $_COOKIE['lang'];
-            }else{
-                $def = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-                if($def == 'ru'){
-                    $lang = 'Rus';
-                    return redirect('?lang=Rus');
-                }elseif($def == 'fr'){
-                    $lang = 'Fra';
-                    return redirect('?lang=Fra');
-                }else{
-                    return redirect('?lang=Eng');
-                    $lang = 'Eng';
-                }
-
-            }
-        }
-        setcookie('lang', $lang, time() + 3600);
+	    $lang = 'ru';
+		if(isset($_GET['lang'])){
+		 $lang = $_GET['lang'];
+		}else{
+		  if(isset($_COOKIE['lang'])){
+		    $lang = $_COOKIE['lang'];
+		  }else{
+		    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+		  }
+		}
+		setcookie('lang', $lang, time()+3600, '/');
+		App::setLocale($lang);
+		//$request->merge(compact('lang'));
+		if(isset($_GET['lang'])){
+		return redirect()->back();
+		}else{
         return $next($request);
+		}
     }
+
 }

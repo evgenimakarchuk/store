@@ -13,7 +13,7 @@ class AppComposer{
         $v_url_arr = explode('/',$v_url);
         $v_cats = Category::whereNull('parent_id')->get();              
         $v_products = Product::orderBy('name')->get();
-
+        
         if (isset($_GET['lang'])) {
             $lang = $_GET['lang'];
         } else {
