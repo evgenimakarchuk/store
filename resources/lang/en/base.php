@@ -1,0 +1,30 @@
+<?php
+return [
+    'account'=>'My Account',
+    'wishlist'=>'Wishlist',
+    'myCart'=>'My Cart',
+    'checkout'=>'Checkout',
+    'login'=>'Login',
+    'register'=>'Register',
+    'name'=>'Ivan',
+    'logout'=>'Logout',
+    'lang'=>'Lang',   
+    'french'=>'French',
+    'english'=>'English',
+    'russian'=>'Russian',
+    'currency'=>'currency',
+    'usd'=>'USD',
+    'euro'=>'EUR',
+    'rub'=>'RUB',
+    'search'=>'Search',
+    'home'=>'Home',
+    'category'=>'Category',
+    'about'=>'About',
+    'contacts'=>'Contacts',
+    'feedback'=>'Feedback',
+    'basket'=>'Basket',
+    'rub'=>'rub',
+    'clear'=>'Clear',
+    'buy'=>'buy'
+    
+];

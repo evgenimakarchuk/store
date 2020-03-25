@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::group(['middleware' => ['lang']],function(){
+
+Route::get('/','BaseController@getIndex')->middleware('lang');
+
+
 
 Auth::routes();
 
@@ -43,5 +45,5 @@ Route::post('ajax/datalist','Ajax\DatalistController@postIndex');
 Route::post('ajax/modal','Ajax\ModalController@postIndex');
 
 Route::get('{url}', 'PageController@getIndex');
-
+});
 

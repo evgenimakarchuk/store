@@ -42,7 +42,7 @@
       <div class="col-md-6 aut">
         <div class="user-menu">
           <ul class="navbar-nav ml-auto">
-            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
+            <li><a href="#"><i class="fa fa-user"></i> {{__('base.account')}}</a></li>
             <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
             <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
             <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
@@ -82,9 +82,34 @@
         </div>
       </div>
 
+
       <div id="prod" class="col-md-6">
         <div class="header-right">
           <ul class="list-unstyled list-inline">
+
+          <li class="dropdown dropdown-small aut">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <img id="imgNavSel" src="{{asset('/img/flag/'.$lang.'_40.jpg')}}" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;
+                <span id="lanNavSel">{{$lang}}</span> <span class="caret"></span>
+              </a>
+        <ul class="dropdown-menu mumu" role="menu">
+            <li><a id="navFra" href="{{asset('?lang=Fra')}}" class="language">
+                  <img id="imgNavFra" src="{{asset('/img/flag/Fra_40.jpg')}}" alt="France" class="img-thumbnail icon-small">&nbsp;
+                  <span id="lanNavFra">Française</span>&nbsp;
+                </a>
+            </li>
+            <li><a id="navEng" href="{{asset('?lang=Eng')}}" class="language">
+                    <img id="imgNavEng" src="{{asset('/img/flag/Eng_40.jpg')}}" alt="English" class="img-thumbnail icon-small">&nbsp;
+                    <span id="lanNavEng">English</span>&nbsp;
+                </a>
+            </li>
+            <li><a id="navRus" href="{{asset('?lang=Rus')}}" class="language">
+                    <img id="imgNavRus" src="{{asset('/img/flag/Rus_40.jpg')}}" alt="Russia" class="img-thumbnail icon-small">&nbsp;
+                    <span id="lanNavRus">Русский</span>&nbsp;
+                </a>
+            </li>
+        </ul>
+          </li>
            
             <li class="dropdown dropdown-small aut">
               <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
@@ -92,12 +117,12 @@
                  </span><b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">USD</a></li>
-                <li><a href="#">INR</a></li>
-                <li><a href="#">GBP</a></li>
+                <li><a href="#">EUR</a></li>
+                <li><a href="#">RUB</a></li>
               </ul>
             </li>
 
-            <li class="dropdown dropdown-small aut">
+            <!-- <li class="dropdown dropdown-small aut">
               <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
                  href="#"><span class="key">language :</span>
                  <span class="value">English </span><b class="caret"></b></a>
@@ -106,7 +131,7 @@
                 <li><a href="#">French</a></li>
                 <li><a href="#">German</a></li>
               </ul>
-            </li>
+            </li> -->
 
             <li class="dropdown dropdown-sm" >        
               <form >
