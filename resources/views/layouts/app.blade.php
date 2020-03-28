@@ -85,33 +85,33 @@
 
       <div id="prod" class="col-md-5">
         <div class="header-right">
-          <ul class="list-unstyled list-inline">
+          <ul class="list-unstyled list-inline" >
 
-          <li class="dropdown dropdown-small aut">
+        <li class="dropdown dropdown-small aut" style="display: inline-block; width: 30%">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <img id="imgNavSel" src="{{asset('/img/flag/'.$lang.'_40.jpg')}}" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;
+                <img id="imgNavSel" src="{{asset('storage/flags/'.$lang.'-flag-xs.png')}}" width="40px" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;
                 <span id="lanNavSel">{{$lang}}</span> <span class="caret"></span>
               </a>
-        <ul class="dropdown-menu mumu" role="menu">
-            <li><a id="navFra" href="{{asset('?lang=fr')}}" class="language">
-                  <img id="imgNavFra" src="{{asset('/img/flag/Fra_40.jpg')}}" alt="France" class="img-thumbnail icon-small">&nbsp;
+          <ul class="dropdown-menu mumu" role="menu" style="text-align: left;">
+            <li><a id="navFra" href="{{asset('?lang=fr')}}" class="language" style="padding-right: 45px;">
+                  <img id="imgNavFra" src="{{asset('storage/flags/fr-flag-xs.png')}}" width="40px" alt="France" class="img-thumbnail icon-small">&nbsp;
                   <span id="lanNavFra">Française</span>&nbsp;
                 </a>
             </li>
             <li><a id="navEng" href="{{asset('?lang=en')}}" class="language">
-                    <img id="imgNavEng" src="{{asset('/img/flag/Eng_40.jpg')}}" alt="English" class="img-thumbnail icon-small">&nbsp;
+                    <img id="imgNavEng" src="{{asset('storage/flags/en-flag-xs.png')}}" width="40px" alt="English" class="img-thumbnail icon-small">&nbsp;
                     <span id="lanNavEng">English</span>&nbsp;
                 </a>
             </li>
             <li><a id="navRus" href="{{asset('/?lang=ru')}}" class="language">
-                    <img id="imgNavRus" src="{{asset('/img/flag/Rus_40.jpg')}}" alt="Russia" class="img-thumbnail icon-small">&nbsp;
+                    <img id="imgNavRus" src="{{asset('storage/flags/ru-flag-xs.png')}}" width="40px" alt="Russia" class="img-thumbnail icon-small">&nbsp;
                     <span id="lanNavRus">Русский</span>&nbsp;
                 </a>
             </li>
-        </ul>
-          </li>
+          </ul>
+        </li>
            
-            <li class="dropdown dropdown-small aut">           
+            <li class="dropdown dropdown-small aut" style="display: inline-block;">           
               <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
                  href="#"><span class="key">@lang('base.currency') :</span>
                   @if(empty($_COOKIE['currency']))
@@ -127,19 +127,9 @@
               </ul>
             </li>
            
-            
-            <!-- <li class="dropdown dropdown-small aut">
-              <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
-                 href="#"><span class="key">language :</span>
-                 <span class="value">English </span><b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">English</a></li>
-                <li><a href="#">French</a></li>
-                <li><a href="#">German</a></li>
-              </ul>
-            </li> -->
+         
 
-            <li class="dropdown dropdown-sm" >        
+            <li class="dropdown dropdown-sm" style="display: inline-block;">        
               <form >
                 @csrf 
                   <svg id="close" class="bi bi-x-square" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -180,12 +170,7 @@
       
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <!-- <li class="active"><a href="{{asset('/')}}">Домой</a></li> -->
-          <!-- <li><a href="/shop.html">Страница магазина</a></li> -->
-          <!-- <li><a href="single-product.html">Один продукт</a></li> -->
-          <!-- <li><a href="cart.html">Корзина</a></li> -->
-          <!-- <li><a href="/checkout.html">Проверка</a></li> -->
-           <!-- <li><a href="#">Другие</a></li> -->
+        
           <li class="{{($v_url_arr[1]=='')?'active':''}}"><a href="{{asset('/')}}">@lang('base.home')</a></li>
                      
           <li class="dropdown dropdown-small {{($v_url_arr[1]=='catalog')?'active':''}}">
@@ -404,4 +389,23 @@
         </table> -->
         <!-- style="position: absolute;top: 5px;left: 100%; display: none; background-color: white;" -->
         <!-- position: relative; -->
+
+           
+            <!-- <li class="dropdown dropdown-small aut">
+              <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
+                 href="#"><span class="key">language :</span>
+                 <span class="value">English </span><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">English</a></li>
+                <li><a href="#">French</a></li>
+                <li><a href="#">German</a></li>
+              </ul>
+            </li> -->
+
+              <!-- <li class="active"><a href="{{asset('/')}}">Домой</a></li> -->
+          <!-- <li><a href="/shop.html">Страница магазина</a></li> -->
+          <!-- <li><a href="single-product.html">Один продукт</a></li> -->
+          <!-- <li><a href="cart.html">Корзина</a></li> -->
+          <!-- <li><a href="/checkout.html">Проверка</a></li> -->
+           <!-- <li><a href="#">Другие</a></li> -->
        
