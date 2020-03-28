@@ -23,12 +23,20 @@ class AppComposer{
                 $lang = 'Fra';
             }
         }
+        
+        // echo "&nbsp &nbsp"; 
+        // echo $_COOKIE["lang"];
+        // echo "&nbsp &nbsp";
+        // echo "<br>";
+        // echo $_COOKIE["currency"];
+        // print_r($_COOKIE);
                     
         $view->with('v_cats',$v_cats)
              ->with('v_url',$v_url)
              ->with('v_url_arr',$v_url_arr)
              ->with('v_products',$v_products)
              ->with('lang',$lang);
+             
              
     }
 

@@ -19274,6 +19274,73 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./public/js/menu.js":
+/*!***************************!*\
+  !*** ./public/js/menu.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// вывод поля поиска
+$('.bi').on('click', function () {
+  $('.aut').hide();
+  $('#data_products,#close').show(2000);
+});
+$('#close').on('click', function () {
+  $('#data_products,#close').hide();
+  $('.aut').show();
+});
+$('.lod').on('click', function () {
+  $('.value #eu,.value #ru,.value #eu b,.value #ru b').hide();
+  $('.value #dol,.value #dol b').show();
+});
+$('.ue').on('click', function () {
+  $('.value #dol,.value #ru,.value #dol b,.value #ru b').hide();
+  $('.value #eu,.value #eu b').show();
+});
+$('.ur').on('click', function () {
+  $('.value #dol,.value #eu,.value #dol b,.value #eu b').hide();
+  $('.value #ru,.value #ru b').show();
+}); // изменение текста, замедленное появление элемента
+// $('.nav a').on('mouseover',function(){
+//     var text = $(this).text();
+//     console.log(text);
+//     var text = ['Домой','Категория','О компании','Контакты','Обратная связь'];
+//     $('.product-bit-title h2').text(text);
+// });
+// $('.nav').hide(700,function(){
+//     $(this).show(700);
+// });
+// $('.nav .katehori').on('mouseout',function(){
+//     $('.nav .katehori').hide(70000);
+// });
+// добавление(удаление) классов,стилей
+// $('.katehori ').addClass(' open');
+// .removeClass("myClass noClass");
+// $('.subkat').css('position', 'absolut');
+// $('.katehori' ) .css('position', 'relative');
+// $('.subkat' ) .css('position', 'absolut');
+// перенаправление
+// $('.katehori ul').on('click',function(){
+//          $(location).attr('href','http://localhost:8888/catalog/lenovo_laptop')    
+// });
+// $('.katehori').on('click',function(){
+//     $(location).attr('href','http://localhost:8888/catalog/lenovo_laptops') 
+// });
+// вывод подменю(попытка)
+// $('.katehori li').on('mouseover',function(){
+//     $('.subkatehori').show();
+// });
+// $('.katehori ul li').on('mouseover',function(){
+//     $('.katehori ul li').css('display', 'block');
+//     $('.katehori ul li').show();
+// });
+// $('.katehori,.katehori ul li').on('mouseout',function(){
+//     $('.subkatehori').hide();
+// });
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -19318,13 +19385,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!***********************************!*\
-  !*** multi ./resources/js/app.js ***!
-  \***********************************/
+/*!*******************************************************!*\
+  !*** multi ./resources/js/app.js ./public/js/menu.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/laravel/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/laravel/public/js/menu.js */"./public/js/menu.js");
 
 
 /***/ })

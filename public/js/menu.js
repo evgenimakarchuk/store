@@ -17,6 +17,8 @@ $('#close').on('click',function(){
 
 
 
+
+
         // изменение текста, замедленное появление элемента
  // $('.nav a').on('mouseover',function(){
     //     var text = $(this).text();

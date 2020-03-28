@@ -39,20 +39,20 @@
 <div class="header-area">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 aut">
+      <div class="col-md-7 aut">
         <div class="user-menu">
           <ul class="navbar-nav ml-auto">
             <li><a href="#"><i class="fa fa-user"></i> {{__('base.account')}}</a></li>
-            <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-            <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
-            <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
+            <li><a href="#"><i class="fa fa-heart"></i> @lang('base.wishlist')</a></li>
+            <li><a href="cart.html"><i class="fa fa-user"></i> {{__('base.myCart')}}</a></li>
+            <li><a href="checkout.html"><i class="fa fa-user"></i>@lang('base.checkout')</a></li>
                 @guest
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+              <a class="nav-link" href="{{ route('login') }}">{{__('base.login')}}</a>
             </li>
                   @if (Route::has('register'))
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+              <a class="nav-link" href="{{ route('register') }}">@lang('base.register')</a>
             </li>
                   @endif
                   @else
@@ -60,14 +60,14 @@
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" 
                  role="button" data-toggle="dropdown" aria-haspopup="true" 
                  aria-expanded="false" v-pre>
-                  {{ Auth::user()->name }} <span class="caret"></span>
+                  {{ Auth::user()->name=__('base.name') }} <span class="caret"></span>
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                      document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
+                      {{__('base.logout')}}
                   </a>
 
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" 
@@ -83,7 +83,7 @@
       </div>
 
 
-      <div id="prod" class="col-md-6">
+      <div id="prod" class="col-md-5">
         <div class="header-right">
           <ul class="list-unstyled list-inline">
 
@@ -93,17 +93,17 @@
                 <span id="lanNavSel">{{$lang}}</span> <span class="caret"></span>
               </a>
         <ul class="dropdown-menu mumu" role="menu">
-            <li><a id="navFra" href="{{asset('?lang=Fra')}}" class="language">
+            <li><a id="navFra" href="{{asset('?lang=fr')}}" class="language">
                   <img id="imgNavFra" src="{{asset('/img/flag/Fra_40.jpg')}}" alt="France" class="img-thumbnail icon-small">&nbsp;
                   <span id="lanNavFra">Française</span>&nbsp;
                 </a>
             </li>
-            <li><a id="navEng" href="{{asset('?lang=Eng')}}" class="language">
+            <li><a id="navEng" href="{{asset('?lang=en')}}" class="language">
                     <img id="imgNavEng" src="{{asset('/img/flag/Eng_40.jpg')}}" alt="English" class="img-thumbnail icon-small">&nbsp;
                     <span id="lanNavEng">English</span>&nbsp;
                 </a>
             </li>
-            <li><a id="navRus" href="{{asset('?lang=Rus')}}" class="language">
+            <li><a id="navRus" href="{{asset('/?lang=ru')}}" class="language">
                     <img id="imgNavRus" src="{{asset('/img/flag/Rus_40.jpg')}}" alt="Russia" class="img-thumbnail icon-small">&nbsp;
                     <span id="lanNavRus">Русский</span>&nbsp;
                 </a>
@@ -111,17 +111,23 @@
         </ul>
           </li>
            
-            <li class="dropdown dropdown-small aut">
+            <li class="dropdown dropdown-small aut">           
               <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
-                 href="#"><span class="key">currency :</span><span class="value">USD 
-                 </span><b class="caret"></b></a>
+                 href="#"><span class="key">@lang('base.currency') :</span>
+                  @if(empty($_COOKIE['currency']))
+                    <span class="value">USD</span><b class="caret"></b>
+                  @else
+                    <span class="value">{{ $_COOKIE['currency'] }}</span><b class="caret"></b>                    
+                  @endif 
+              </a>
               <ul class="dropdown-menu">
-                <li><a href="#">USD</a></li>
-                <li><a href="#">EUR</a></li>
-                <li><a href="#">RUB</a></li>
+                <li><a href="{{asset('/currency?currency=USD')}}">USD</a></li>
+                <li><a href="{{asset('/currency?currency=EUR')}}">EUR</a></li>
+                <li><a href="{{asset('/currency?currency=RUB')}}">RUB</a></li>
               </ul>
             </li>
-
+           
+            
             <!-- <li class="dropdown dropdown-small aut">
               <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
                  href="#"><span class="key">language :</span>
@@ -143,7 +149,7 @@
 
                   <datalist id="mydata"></datalist>
                   <input id="data_products" type="search" list="mydata" placeholder="Search...">
-                  <button type="submit"  list="mydata">Поиск</button> 
+                  <button type="submit"  list="mydata"> {{__('base.search')}}</button> 
                 
                   <svg class="bi bi-search" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M12.442 12.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path>
@@ -180,11 +186,11 @@
           <!-- <li><a href="cart.html">Корзина</a></li> -->
           <!-- <li><a href="/checkout.html">Проверка</a></li> -->
            <!-- <li><a href="#">Другие</a></li> -->
-          <li class="{{($v_url_arr[1]=='')?'active':''}}"><a href="{{asset('/')}}">Домой</a></li>
+          <li class="{{($v_url_arr[1]=='')?'active':''}}"><a href="{{asset('/')}}">@lang('base.home')</a></li>
                      
           <li class="dropdown dropdown-small {{($v_url_arr[1]=='catalog')?'active':''}}">
               <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
-                                                                      href="#">Категория</a>
+                                                                      href="#">{{__('base.category')}}</a>
             <ul class="katehori dropdown-menu">
                 @foreach($v_cats as $one)
               <li class="dropdown dropdown-small">
@@ -218,13 +224,13 @@
                 </ul>         -->
                    
           <li class="{{($v_url_arr[1]=='about')?'active':''}}">
-            <a href="{{asset('about')}}">О компании</a>
+            <a href="{{asset('about')}}">@lang('base.about')</a>
           </li>
           <li class="{{($v_url_arr[1]=='contacts')?'active':''}}">
-            <a href="{{asset('contacts')}}">Контакты</a>
+            <a href="{{asset('contacts')}}">{{__('base.contacts')}}</a>
           </li>
           <li class="{{($v_url_arr[1]=='feedback')?'active':''}}">
-            <a href="{{asset('feedback/create')}}">Обратная связь</a>
+            <a href="{{asset('feedback/create')}}">@lang('base.feedback')</a>
           </li>
         </ul>
             <!-- @php
@@ -232,15 +238,15 @@
             @endphp -->
                
           <a class="shopping-item" id="clearBasket" style="display: none; color: red;text-decoration: none;"   
-                                                href="#">Очистить</a>     
+                                                href="#">{{__('base.clear')}}</a>     
           <div class="shopping-item" >
-              <a class="cart-amunt" href="#">Корзина - <span class="cart-amunt"><span id="totalPrice">0</span> руб.</span> 
+              <a class="cart-amunt" href="#">@lang('base.basket') - <span class="cart-amunt"><span id="totalPrice">0</span> {{__('base.rub')}}.</span> 
                 <i class="fa fa-shopping-cart"></i> 
                 <span class="product-count"><span id="totalGoods">0</span></span>
               </a> 
           </div>        
           <a class="shopping-item" id="checkOut" style="display: none; color: green; text-decoration: none;" 
-                                   href="{{asset('basket')}}">Оформить</a>                   
+                                   href="{{asset('basket')}}">{{__('base.buy')}}</a>                   
       </div>
     </div>
   </div>

@@ -16,7 +16,8 @@ class LangMiddleware
      */
     public function handle($request, Closure $next)
     {
-	    $lang = 'ru';
+       
+        $lang = 'ru';
 		if(isset($_GET['lang'])){
 		 $lang = $_GET['lang'];
 		}else{
@@ -30,10 +31,10 @@ class LangMiddleware
 		App::setLocale($lang);
 		//$request->merge(compact('lang'));
 		if(isset($_GET['lang'])){
-		return redirect()->back();
+		    return redirect()->back();
 		}else{
-        return $next($request);
-		}
+            return $next($request);
+        }
+        
     }
-
 }

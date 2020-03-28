@@ -56,28 +56,28 @@
         <div class="col-md-3 col-sm-6">
           <div class="single-promo promo1">
             <i class="fa fa-refresh"></i>
-            <p>30 дней возврата</p>
+            <p>@lang('base.return')</p>
           </div>
         </div>
 
         <div class="col-md-3 col-sm-6">
           <div class="single-promo promo2">
             <i class="fa fa-truck"></i>
-            <p>Бесплатная доставка</p>
+            <p>{{__('base.delivery')}}</p>
           </div>
         </div>
 
         <div class="col-md-3 col-sm-6">
           <div class="single-promo promo3">
             <i class="fa fa-lock"></i>
-            <p>Безопасные платежи</p>
+            <p>@lang('base.payments')</p>
           </div>
         </div>
 
         <div class="col-md-3 col-sm-6">
           <div class="single-promo promo4">
             <i class="fa fa-gift"></i>
-            <p> Новый товар</p>
+            <p> {{__('base.newproduct')}}</p>
           </div>
         </div>
 
@@ -91,7 +91,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="latest-product">
-            <h2 class="section-title">Самые последние разработки</h2>
+            <h2 class="section-title">@lang('base.latestdevelopment')</h2>
             <div class="product-carousel">
 
               <div class="single-product">

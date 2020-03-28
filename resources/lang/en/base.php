@@ -19,12 +19,18 @@ return [
     'search'=>'Search',
     'home'=>'Home',
     'category'=>'Category',
+    'smartphones'=>'smartphones',
+    'laptops'=>'laptops',
     'about'=>'About',
     'contacts'=>'Contacts',
     'feedback'=>'Feedback',
     'basket'=>'Basket',
     'rub'=>'rub',
     'clear'=>'Clear',
-    'buy'=>'buy'
-    
+    'buy'=>'buy',
+    'return'=>'30 days refund',
+    'delivery'=>'Free delivery',
+    'payments'=>'Secure payments',
+    'newproduct'=>'New product',
+    'latestdevelopment'=>'Latest development'
 ];
