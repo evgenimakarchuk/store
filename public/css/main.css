@@ -13,13 +13,27 @@
 .mainmenu-area .nav > li > a:focus {background: #5a88ca; color:#FFF;}
 /* color: #0000FF; */
 
-        /* поиск */        
+        /* поиск */ 
+.header-area div.aut { padding: 0px;}       
 .dropdown input,svg#close {display: none;}
 
 
-
+.dropdown input {width: 82%; padding-left: 10px;display: none;}
 .dropdown input:focus::placeholder {opacity: 0;}
 .dropdown input,.dropdown form {cursor: pointer;}
+.dropdown.aut { display: inline-block; width: 30%; float: left; padding: 0px;}
+.dropdown.aut a img { width: 30px;}
+.dropdown.fom { display: inline-block; width: 40%;}
+div#prod { padding: 0px;}
+.header-right ul.list-inline li ul.mumu { text-align: left;}
+.header-right ul.list-inline li ul.mumu li a { padding-right: 45px; }
+.header-right ul.list-inline li ul.mumu li img { width: 40px;}
+svg#close { display: none; float: left; margin-top: 4px; margin-left: 11px;}
+.dropdown.fom button { display: inline-block;}
+.bi.bi-search { float: right; margin-left: 10px; margin-top: 10px;}
+
+a#clearBasket { display: none; color: red;text-decoration: none;}
+a#checkOut { display: none; color: green; text-decoration: none;}
 
 
 .modal_vindow {
@@ -71,14 +85,10 @@
     opacity: 0.5;
     background: #000;
 }
-body{
-    background-color: yellow;
-}
-.header-area {
-    background: none repeat scroll 0 0  #7CFC00;
-}
+body{ background-color: yellow; }
+.header-area { background: none repeat scroll 0 0  #7CFC00; }
 /* .dropdown form  {text-align: right;} */
-.dropdown input {width: 1100px; padding-left: 10px; }
+
 /* .modal-close::before {
     position: relative;
     top: -1px;

@@ -30,6 +30,10 @@ return [
     'delivery'=>'Бесплатная доставка',
     'payments'=>'Безопасные платежи',
     'newproduct'=>'Новый продукт',
-    'latestdevelopment'=>'Самые последние разработки'
+    'latestdevelopment'=>'Самые последние разработки',
+    'Smartphones'=>'Смартфоны',
+    'Tablets'=>'Планшеты',
+    'Laptops'=>'Ноутбуки',
+    'Computers'=>'Компьютеры'
     
 ];

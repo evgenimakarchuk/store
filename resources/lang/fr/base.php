@@ -12,7 +12,7 @@ return [
     'french'=>'Français',
     'english'=>'Anglais',
     'russian'=>'Russe',
-    'currency'=>'Monnaie',
+    'currency'=>'monnaie',
     'usd'=>'USD',
     'euro'=>'EUR',
     'rub'=>'RUB',
@@ -25,6 +25,10 @@ return [
     'basket'=>'Panier',
     'rub'=>'Rub',
     'clear'=>'Сlair',
-    'buy'=>'Acheter'
+    'buy'=>'Acheter',
+    'Smartphones'=>'Smartphone',
+    'Tablets'=>'Tablet',
+    'Laptops'=>'Portable',
+    'Computers'=>'Ordinateur'
     
 ];

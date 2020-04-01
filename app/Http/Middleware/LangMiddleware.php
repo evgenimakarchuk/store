@@ -19,12 +19,12 @@ class LangMiddleware
        
         $lang = 'ru';
 		if(isset($_GET['lang'])){
-		 $lang = $_GET['lang'];
+		        $lang = $_GET['lang'];
 		}else{
 		  if(isset($_COOKIE['lang'])){
-		    $lang = $_COOKIE['lang'];
+		        $lang = $_COOKIE['lang'];
 		  }else{
-		    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+		        $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 		  }
 		}
 		setcookie('lang', $lang, time()+3600, '/');

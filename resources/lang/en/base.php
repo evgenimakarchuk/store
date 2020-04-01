@@ -32,5 +32,9 @@ return [
     'delivery'=>'Free delivery',
     'payments'=>'Secure payments',
     'newproduct'=>'New product',
-    'latestdevelopment'=>'Latest development'
+    'latestdevelopment'=>'Latest development',
+    'Smartphones'=>'Smartphones',
+    'Tablets'=>'Tablets',
+    'Laptops'=>'Laptops',
+    'Computers'=>'Computers'
 ];

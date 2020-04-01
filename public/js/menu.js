@@ -3,7 +3,10 @@
 
 $('.bi').on('click',function(){
     $('.aut').hide();
-    $('#data_products,#close' ).show(2000); 
+    $('#data_products,#close' ).show('fast');
+    $('.fom' ) .css('width', '240%');
+    $('.fom input' ) .css('width', '82%'); 
+    $('.fom button ' ) .css('align', 'right'); 
    
 });
 
@@ -11,6 +14,8 @@ $('#close').on('click',function(){
     
     $('#data_products,#close' ).hide();
     $('.aut').show();
+    $('.fom' ) .css('width', '40%');
+    $('.fom input' ) .css('display', 'none');
 
 });
 
@@ -18,7 +23,7 @@ $('#close').on('click',function(){
 
 
 
-
+// 1170px
         // изменение текста, замедленное появление элемента
  // $('.nav a').on('mouseover',function(){
     //     var text = $(this).text();

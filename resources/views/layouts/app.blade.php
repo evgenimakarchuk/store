@@ -85,40 +85,40 @@
 
       <div id="prod" class="col-md-5">
         <div class="header-right">
-          <ul class="list-unstyled list-inline" >
+          <ul class="list-unstyled list-inline">
 
-        <li class="dropdown dropdown-small aut" style="display: inline-block; width: 30%">
+        <li class="dropdown dropdown-small aut">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                <img id="imgNavSel" src="{{asset('storage/flags/'.$lang.'-flag-xs.png')}}" width="40px" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;
+                <img id="imgNavSel" src="{{asset('storage/flags/'.$lang.'-flag-xs.png')}}" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;
                 <span id="lanNavSel">{{$lang}}</span> <span class="caret"></span>
               </a>
-          <ul class="dropdown-menu mumu" role="menu" style="text-align: left;">
-            <li><a id="navFra" href="{{asset('?lang=fr')}}" class="language" style="padding-right: 45px;">
-                  <img id="imgNavFra" src="{{asset('storage/flags/fr-flag-xs.png')}}" width="40px" alt="France" class="img-thumbnail icon-small">&nbsp;
+          <ul class="dropdown-menu mumu" role="menu">
+            <li><a id="navFra" href="{{asset('?lang=fr')}}" class="language">
+                  <img id="imgNavFra" src="{{asset('storage/flags/fr-flag-xs.png')}}" alt="France" class="img-thumbnail icon-small">&nbsp;
                   <span id="lanNavFra">Française</span>&nbsp;
                 </a>
             </li>
             <li><a id="navEng" href="{{asset('?lang=en')}}" class="language">
-                    <img id="imgNavEng" src="{{asset('storage/flags/en-flag-xs.png')}}" width="40px" alt="English" class="img-thumbnail icon-small">&nbsp;
+                    <img id="imgNavEng" src="{{asset('storage/flags/en-flag-xs.png')}}" alt="English" class="img-thumbnail icon-small">&nbsp;
                     <span id="lanNavEng">English</span>&nbsp;
                 </a>
             </li>
             <li><a id="navRus" href="{{asset('/?lang=ru')}}" class="language">
-                    <img id="imgNavRus" src="{{asset('storage/flags/ru-flag-xs.png')}}" width="40px" alt="Russia" class="img-thumbnail icon-small">&nbsp;
+                    <img id="imgNavRus" src="{{asset('storage/flags/ru-flag-xs.png')}}" alt="Russia" class="img-thumbnail icon-small">&nbsp;
                     <span id="lanNavRus">Русский</span>&nbsp;
                 </a>
             </li>
           </ul>
         </li>
            
-            <li class="dropdown dropdown-small aut" style="display: inline-block;">           
+            <li class="dropdown dropdown-small aut">           
               <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
                  href="#"><span class="key">@lang('base.currency') :</span>
-                  @if(empty($_COOKIE['currency']))
-                    <span class="value">USD</span><b class="caret"></b>
-                  @else
-                    <span class="value">{{ $_COOKIE['currency'] }}</span><b class="caret"></b>                    
-                  @endif 
+                 @if(isset($_COOKIE['currency']))
+                    <span class="value">{{ $_COOKIE['currency'] }}</span><b class="caret"></b>
+                 @else
+                    <span class="value">USD</span><b class="caret"></b>                      
+                 @endif 
               </a>
               <ul class="dropdown-menu">
                 <li><a href="{{asset('/currency?currency=USD')}}">USD</a></li>
@@ -127,19 +127,17 @@
               </ul>
             </li>
            
-         
-
-            <li class="dropdown dropdown-sm" style="display: inline-block;">        
+            <li class="dropdown dropdown-sm fom">        
               <form >
                 @csrf 
-                  <svg id="close" class="bi bi-x-square" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <svg id="close" class="bi bi-x-square" width="3%" height="3%" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M16 3H4a1 1 0 00-1 1v12a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1zM4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4z" clip-rule="evenodd"></path>
                       <path fill-rule="evenodd" d="M9.293 10L6.646 7.354l.708-.708L10 9.293l2.646-2.647.708.708L10.707 10l2.647 2.646-.708.708L10 10.707l-2.646 2.647-.708-.707L9.293 10z" clip-rule="evenodd"></path>
                   </svg>
 
                   <datalist id="mydata"></datalist>
-                  <input id="data_products" type="search" list="mydata" placeholder="Search...">
-                  <button type="submit"  list="mydata"> {{__('base.search')}}</button> 
+                  <input  id="data_products" type="search" list="mydata" placeholder="Search...">
+                  <button type="submit" list="mydata"> {{__('base.search')}}</button> 
                 
                   <svg class="bi bi-search" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" d="M12.442 12.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path>
@@ -170,32 +168,33 @@
       
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-        
-          <li class="{{($v_url_arr[1]=='')?'active':''}}"><a href="{{asset('/')}}">@lang('base.home')</a></li>
-                     
+          <li class="{{($v_url_arr[1]=='')?'active':''}}">
+              <a href="{{asset('/')}}">@lang('base.home')</a>
+          </li>                    
           <li class="dropdown dropdown-small {{($v_url_arr[1]=='catalog')?'active':''}}">
-              <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
-                                                                      href="#">{{__('base.category')}}</a>
-            <ul class="katehori dropdown-menu">
-                @foreach($v_cats as $one)
-              <li class="dropdown dropdown-small">
-                <a data-hover="dropdown" class="dropdown-toggle" 
-                                  href="{{asset('catalog/'.$one->slug)}}">{{$one->name}}</a>
-
-                  @if($one->categories()->get()->count()>0) 
-                <ul class="subkatehori dropdown-menu" >
-                      @foreach($one->categories()->get() as $two)  
-                    <li class="dropdown dropdown-small">
-                      <a data-hover="dropdown" class="dropdown-toggle" 
-                                    href="{{asset('catalog/'.$two->slug)}}">{{$two->name}}</a>
-                    </li>
-                      @endforeach
-                </ul>              
-                  @endif               
-              </li>
-                @endforeach 
-                      
-            </ul>
+              <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle"href="#">
+                                      {{__('base.category')}}
+              </a>
+              <ul class="katehori dropdown-menu">
+                  @foreach($v_cats as $one)
+                  <li class="dropdown dropdown-small">
+                      <a data-hover="dropdown" class="dropdown-toggle"
+                        href="{{asset('catalog/'.$one->slug)}}">{{__('base.'.$one->name)}}
+                      </a>
+                      @if($one->categories()->get()->count()>0) 
+                      <ul class="subkatehori dropdown-menu" >
+                          @foreach($one->categories()->get() as $two)  
+                          <li class="dropdown dropdown-small">
+                              <a data-hover="dropdown" class="dropdown-toggle" 
+                                href="{{asset('catalog/'.$two->slug)}}">{{ $two->name }}
+                              </a>
+                          </li>
+                          @endforeach
+                      </ul>              
+                      @endif               
+                  </li>
+                  @endforeach           
+              </ul>
           </li> 
           <!-- <ul class="katehori btn-group dropright">
                   <li type="button" class="btn btn-secondary">
@@ -222,16 +221,14 @@
               print_r($v_url_arr)
             @endphp -->
                
-          <a class="shopping-item" id="clearBasket" style="display: none; color: red;text-decoration: none;"   
-                                                href="#">{{__('base.clear')}}</a>     
+          <a class="shopping-item" id="clearBasket" href="#">{{__('base.clear')}}</a>     
           <div class="shopping-item" >
               <a class="cart-amunt" href="#">@lang('base.basket') - <span class="cart-amunt"><span id="totalPrice">0</span> {{__('base.rub')}}.</span> 
                 <i class="fa fa-shopping-cart"></i> 
                 <span class="product-count"><span id="totalGoods">0</span></span>
               </a> 
           </div>        
-          <a class="shopping-item" id="checkOut" style="display: none; color: green; text-decoration: none;" 
-                                   href="{{asset('basket')}}">{{__('base.buy')}}</a>                   
+          <a class="shopping-item"id="checkOut"href="{{asset('basket')}}">{{__('base.buy')}}</a>                   
       </div>
     </div>
   </div>
